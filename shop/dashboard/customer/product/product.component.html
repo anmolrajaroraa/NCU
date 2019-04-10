@@ -1,0 +1,11 @@
+<div>
+  <ul>
+    <li *ngFor="let item of products">
+      <div *ngIf="item.sub_category_id == scId">
+        <img [src]="item.product_url" alt=""><br>
+        <p>{{item.product_name}}</p>
+        <button class="btn btn-warning" >Add To Cart</button>
+      </div>
+    </li>
+  </ul>
+</div>
