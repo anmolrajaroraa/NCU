@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {environment} from '../../../environments/environment';
 import { BehaviorSubject } from 'rxjs';
+import { delay } from 'q';
 @Injectable({
   providedIn: 'root'
 })
@@ -24,5 +25,24 @@ export class UserService {
       });
       return promise;
   }
+
+  doRegister(userid:string, password:string){
+    console.log(userid);
+    console.log(password);
+    var userObject = {
+      'userid':userid,'password':password
+    }
+    console.log('JSON is ',JSON.stringify(userObject));
+    let promise = fetch(environment.registerURL,{
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(userObject)
+    });
+    return promise;
+}
+
+
 
 }

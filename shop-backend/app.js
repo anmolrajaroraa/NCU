@@ -52,6 +52,7 @@ app.use('/',require('./routes/upload'));
 app.use('/',require('./api/categoryapi'));
 app.use('/',require('./api/productapi'));
 app.use('/',require('./api/subcategoryapi'));
+app.use('/',require('./api/orderapi'));
 
 app.use(function (err, req, res, next) {
     console.log('In function after routes', err);

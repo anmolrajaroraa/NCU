@@ -10,9 +10,13 @@ import { AdminComponent } from './shop/dashboard/admin/admin.component';
 import { CustomerComponent } from './shop/dashboard/customer/customer.component';
 import { FileuploadComponent } from './shop/dashboard/admin/fileupload/fileupload.component';
 import {HttpClientModule} from '@angular/common/http';
-import { CategoryComponent } from './shop/dashboard/customer/category/category.component';
-import { SubcategoryComponent } from './shop/dashboard/customer/subcategory/subcategory.component';
-import { ProductComponent } from './shop/dashboard/customer/product/product.component';
+import { CategoryComponent } from './shop/dashboard/customer/combine/category/category.component';
+import { SubcategoryComponent } from './shop/dashboard/customer/combine/subcategory/subcategory.component';
+import { ProductComponent } from './shop/dashboard/customer/combine/product/product.component';
+import { OrderComponent } from './shop/dashboard/customer/combine/order/order.component';
+import { RegisterComponent } from './shop/register/register.component';
+import { PreviousorderComponent } from './shop/dashboard/customer/previousorder/previousorder.component';
+import { CombineComponent } from './shop/dashboard/customer/combine/combine.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +28,11 @@ import { ProductComponent } from './shop/dashboard/customer/product/product.comp
     FileuploadComponent,
     CategoryComponent,
     SubcategoryComponent,
-    ProductComponent
+    ProductComponent,
+    OrderComponent,
+    RegisterComponent,
+    PreviousorderComponent,
+    CombineComponent
   ],
   imports: [
     BrowserModule,

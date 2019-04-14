@@ -60,6 +60,20 @@ const userOperations = {
                 }    
             }
         })
+    },
+    addCustomer(username, password, response){
+        UserModel.create({'userid':username,'password':password,role:'Customer',status:'A'},(err)=>{
+            if(err){
+                console.log(':::::::Error is ',err); 
+                  response.status(500).json({message:'Registration failed!'})  
+                       
+                    }
+            else{
+                console.log('User registered!');  
+                //response.json({message:'File Uploaded...'}); 
+                
+            }
+        })
     }
 }
 module.exports = userOperations;

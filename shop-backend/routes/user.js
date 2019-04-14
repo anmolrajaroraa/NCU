@@ -13,7 +13,8 @@ userRouter.post('/login',(req,res)=>{
     
 })
 userRouter.post('/register',(req,res)=>{
-
+    console.log('Body JSON is ',req.body);
+    userOperations.addCustomer(req.body.userid, req.body.password,res);
 })
 userRouter.post('/profile',(req,res)=>{
 
