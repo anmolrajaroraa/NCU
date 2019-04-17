@@ -1,0 +1,17 @@
+<div>
+  <h4>YOUR ORDERS </h4>
+  <ul>
+    <li *ngFor="let item of commonService.previousOrder">
+      <p>New order</p>
+      <ul>
+        <li *ngFor="let order of item.order">
+          <div *ngIf="order != null">
+            <img [src]="order.product_url" alt="">
+            <p>{{order.price}}</p>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <img src="commonService.previousOrder[0].order[0].product_url" alt="">
+</div>
