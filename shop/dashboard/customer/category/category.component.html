@@ -1,8 +1,0 @@
-<div>
-  <ul>
-    <li *ngFor="let item of categories">
-        <img [src]="item.category_url" alt="" height="200px" width="200px"><br>
-        <button (click)="sendCID(item.category_id)" class="btn btn-primary">{{item.category_name}}</button>
-    </li>
-  </ul>
-</div>
